@@ -17,8 +17,8 @@
 	 
 	 h1 {
 		 font-family: 'Poor Story', sans-serif;
-		 font-size: 3.5em;
-		 color: white;
+		 font-size: 2.5em;
+		 color: #2d3c49;
 	 }
 
      h2 {
@@ -37,18 +37,43 @@
 
 	 a {
 text-decoration: none;
+font-size: 1.3em;
+color: white;
 	 }
 
-a:visited { 
-    color: white;
+a:hover { 
+    color: orange;
 }	 
+
+div {
+	padding: 10px;
+	}
 
      .container {
 		 width: 100%;
 		 display: flex;
-		 flex-direction: column;
 		 justify-content: center;
 		 text-align: center;
 
      }
 
+	 .cat1 {
+		 flex-wrap: wrap;
+		 width: 100%;
+	 }
+	 
+	 .cat2 {
+		 flex-wrap: wrap;
+		 width: 100%;
+	 }
+
+	 .footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+	height: 7%;
+    background-color: #ace;
+    color: white;
+    text-align: center;
+	 }

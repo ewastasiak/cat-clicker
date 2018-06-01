@@ -12,44 +12,94 @@ function playAudio() {
   audio.play();
 }
 
-*/
-const meow = new Audio("sfx/nyan.mp3");
+function makeList() {
+    deckRef.innerHTML = "";
+    for (let i = 0; i < cardsArr.length; i++) {
+      deckRef.innerHTML += `<li class=\"card\"><i class=\"${cardsArr[i]}\"></i></li>`;
+    }
 
+//store
+  	  	function thirdPng() {
+		image.src = "img/clicker3.png";
+
+	setTimeout(function() {
+
+	thirdPng();
+	}, 900);
+		}
+
+*/
+// const meow = new Audio("sfx/nyan.mp3");
+
+/*refactor PRO
+class Cat {
+	constuctor(name) {
+		this.name = `<p>${name}</p>`;
+		NOPE this.img //outside of the constructor
+		this.meowing = sayNyan();
+	}
+	meowing() {
+        //console.log('y'); TU CZY W THIS
+    }
+	
+	animation() {
+	             //funkcja na zewnątrz dla wszystkich	             
+	}
+	
+	counter() {
+		
+	}
+}
+const chi = new Player(this.sprite,0,0);
+*/
+
+
+
+
+
+function Cat(name) {
+	this.name = `<p>${name}</p>`;
+	
+}
+
+const chi = new Cat('Chi');
+const chi2 = new Cat ('Chi no. 2');
 
 
 function sayNyan() {
+	meow = new Audio("sfx/nyan.mp3");
 	meow.play();
 }
 
-let counter = document.querySelector('.counter');
-counter.innerHTML = 0;
-let image = document.querySelector('img');
+let counterone = document.querySelector('.counter1');
+let countertwo = document.querySelector('.counter2');
+counterone.innerHTML = 0;
+countertwo.innerHTML = 0;
+let imageone = document.getElementsByTagName('img')[0];
+let imagetwo = document.getElementsByTagName('img')[1];
 
-image.onclick = function() {
+imageone.onclick = function() {
 	sayNyan();
-	
-	counter.innerHTML++;
-	image.src = "img/clicker2.png";
+
+	counterone.innerHTML++;
+	imageone.src = "img/clicker2.png";
 	setTimeout(function() {
-		image.src = "img/clicker3.png";
+		imageone.src = "img/clicker3.png";
   }, 900);
   
-}
-  //document.getElementById("myImg").src = "hackanm.gif
-  
-  /*setTimeout(function() {
-        comparePair();
-      }, 900);*/
-	  
-	
-	  
-	  	function thirdPng() {
-		image.src = "img/clicker3.png";
-	
-	setTimeout(function() {
-		
-	thirdPng();
-	}, 900);
-	
 
   }
+
+imagetwo.onclick = function() {
+	sayNyan();
+
+	countertwo.innerHTML++;
+	imagetwo.src = "img/3b.png";
+	setTimeout(function() {
+		imagetwo.src = "img/3c.png";
+  }, 900);
+  
+
+  }
+
+
